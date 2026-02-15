@@ -27,7 +27,7 @@ st.markdown(
     """
      Welcome! This tool helps you quickly build a **500 words industry snapshot** using **Wikipedia** as the only data source.
     **What you will get**
-    - - A structured summary covering **industry overview**, **key themes / sub-areas**, and **geographic notes** (when mentioned).
+    - A structured summary covering **industry overview**, **key themes / sub-areas**, and **geographic notes** (when mentioned).
     - A transparent retrieval step showing the **top Wikipedia pages used**.
     **Designed for:** Business Analysts who need a **quick, reliable starting point**.
     """
@@ -51,10 +51,6 @@ api_key = st.sidebar.text_input(
     type="password",
     help="Your key will not be stored permanently."
 )
-
-start_clicked = st.button("Generate Report")
-if start_clicked and not api_key:
-    st.error("Please enter your API Key.")
 
 # ======================================================
 # HELPER FUNCTIONS
@@ -133,7 +129,7 @@ def init_state():
 init_state()
 
 # --- STEP 1: INPUT (Q1) ---
-st.header("1. Industry Selection")
+st.header("Industry Selection")
 
 # Initialize input with session state value
 industry_input = st.text_input(
@@ -153,9 +149,12 @@ if st.button("Generate"):
         st.rerun()
 
 # --- STEP 2: RETRIEVAL (Q2) ---
-if st.session_state.steps >= 2:
-    st.divider()
-    st.header("2. Data Retrieval")
+st.divider()
+st.header("Data Retrieval")
+
+if st.session_state.steps < 2:
+    st.caption("Sources will appear here after you enter an industry and click Generate.")
+else:
     st.info(f"Searching Wikipedia for: **{st.session_state.industry}**...")
     
     if st.session_state.docs is None:
@@ -207,14 +206,16 @@ if st.session_state.steps >= 2:
         
         st.session_state.wiki_context = wiki_context
     
-    if st.session_state.steps == 2 and "report_text" not in st.session_state:
-        st.session_state.steps = 3
-        st.rerun()
+    st.session_state.steps = 3
+    st.rerun()
 
 # --- STEP 3: REPORT (Q3) ---
-if st.session_state.steps >= 3:
-    st.header("3. Industry Report")
+st.divider()
+st.header("Industry Report")
 
+if st.session_state.steps < 3:
+    st.caption("Report will appear here after sources are retrieved.")
+else:
     if "report_text" not in st.session_state:
         with st.spinner("Generating report..."):
             try:

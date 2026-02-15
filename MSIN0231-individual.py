@@ -98,7 +98,7 @@ Mandatory requirements:
 2. **Structure**: Write in structured paragraphs with smooth logical transitions.
 3. **Tone**: Analytical and professional. Avoid generic filler words.
 4. **Cross-source synthesis**: At least 2 paragraphs must include evidence from 2+ different pages (i.e., 2 citations in the same paragraph).  Avoid relying predominantly on a single source.
-5. **Integrated Geography**: Do not force a standalone "Geography" section.  Include regional examples ONLY if they are explicitly present and materially significant in the extracts.  If included, **integrate** them into the relevant analytical paragraph (e.g., regulation, competition) to support your argument.
+5. **Integrated Geography**: Do not create a standalone geography paragraph. If regional examples (e.g., Australia) are materially relevant, integrate them into the most appropriate analytical paragraph (typically drivers or regulation) as supporting evidence.
 6. **Paragraph plan**: 
 Write 4 structured analytical paragraphs. The report must cover:
 (1) Industry definition and boundary,

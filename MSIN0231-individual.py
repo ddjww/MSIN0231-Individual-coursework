@@ -88,10 +88,23 @@ Write a concise and structured industry overview for: {industry}
 The report should:
 - Clearly define the industry and its scope
 - Explain its core structure or main segments where relevant
-- Highlight major drivers, characteristics, or dynamics reflected in the extracts
-- Briefly note geographic patterns if they are material in the text
+- **Analyze** major drivers, dynamics, **and critical challenges or trade-offs** (e.g., regulation, adoption risks) reflected in the extracts.
+- Briefly note geographic patterns. If a specific country is mentioned (e.g., Australia), explain why it is cited (e.g., as a case study or major market) to ensure smooth logical flow.
 
-Write in structured paragraphs with smooth logical transitions.
+Mandatory requirements:
+1. **Citations**: You must cite the source for key facts using the format [Source: Page Title]. 
+   Example: "...market growth has accelerated [Source: Electric Vehicles]."
+   Ensure every paragraph has at least one citation to demonstrate evidence-based analysis.
+2. **Structure**: Write in structured paragraphs with smooth logical transitions.
+3. **Tone**: Analytical and professional. Avoid generic filler words.
+4.  Cross-source synthesis: At least 2 paragraphs must include evidence from 2+ different pages (i.e., 2 citations in the same paragraph).
+5. **Paragraph plan**: Write exactly 5 paragraphs in this order:
+   (1) Definition & boundary
+   (2) Industry structure/segments
+   (3) Drivers/dynamics
+   (4) Challenges/trade-offs (Critical analysis)
+   (5) Geographic patterns (or state that extracts are limited)
+
 Avoid bullet points. Avoid repetition.
 Do not introduce external knowledge.
 Start directly with the content.
@@ -186,7 +199,7 @@ else:
                 "The report will be generated based on the available pages."
             )
         else:
-            st.success(f"Found {num_docs} relevant Wikipedia pages (max {TOP_K_WIKI}).")
+            st.success(f"Found {num_docs} relevant Wikipedia pages.")
 
         wiki_context = ""
         for i, doc in enumerate(st.session_state.docs):

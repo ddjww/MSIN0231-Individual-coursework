@@ -27,9 +27,9 @@ st.markdown(
     """
      Welcome! This tool helps you quickly build a **500 words industry snapshot** using **Wikipedia** as the only data source.
     **What you will get**
-    - A structured summary covering **industry overview**, **key themes / sub-areas**, and **geographic notes** (when mentioned).
-    - A transparent retrieval step showing the **top Wikipedia pages used**.
-    **Designed for:** Business Analysts who need a **quick, reliable starting point**.
+    - A concise industry snapshot powered entirely by Wikipedia.
+    - Source transparency, with direct links to the Wikipedia pages used.
+    - A structured starting point you can refine, expand, or adapt for deeper analysis.
     """
 )
 
@@ -207,7 +207,6 @@ else:
         st.session_state.wiki_context = wiki_context
     
     st.session_state.steps = 3
-    st.rerun()
 
 # --- STEP 3: REPORT (Q3) ---
 st.divider()

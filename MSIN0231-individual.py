@@ -89,7 +89,6 @@ The report should:
 - Clearly define the industry and its scope
 - Explain its core structure or main segments where relevant
 - **Analyze** major drivers, dynamics, **and critical challenges or trade-offs** (e.g., regulation, adoption risks) reflected in the extracts.
-- Briefly note geographic patterns. If a specific country is mentioned (e.g., Australia), explain why it is cited (e.g., as a case study or major market) to ensure smooth logical flow.
 
 Mandatory requirements:
 1. **Citations**: You must cite the source for key facts using the format [Source: Page Title]. 
@@ -98,20 +97,22 @@ Mandatory requirements:
 2. **Structure**: Write in structured paragraphs with smooth logical transitions.
 3. **Tone**: Analytical and professional. Avoid generic filler words.
 4.  Cross-source synthesis: At least 2 paragraphs must include evidence from 2+ different pages (i.e., 2 citations in the same paragraph).
-5. **Paragraph plan**: Write exactly 5 paragraphs in this order:
-   (1) Definition & boundary
-   (2) Industry structure/segments
-   (3) Drivers/dynamics
-   (4) Challenges/trade-offs (Critical analysis)
-   (5) Geographic patterns (or state that extracts are limited)
+5. **Integrated Geography**: Do not force a standalone "Geography" section.  Include regional examples ONLY if they are explicitly present and materially significant in the extracts.  If included, **integrate** them into the relevant analytical paragraph (e.g., regulation, competition) to support your argument.
+6. **Paragraph plan**: 
+Write 4 structured analytical paragraphs. The report must cover:
+(1) Industry definition and boundary,
+(2) Structure and key segments,
+(3) Drivers and competitive dynamics,
+(4) Constraints, risks, or trade-offs.
+7. **Ending Strategy**: End Paragraph 4 with a grounded analytical implication or forward-looking dependency based on the extracts (do not use a generic summary).
 
 Avoid bullet points. Avoid repetition.
 Do not introduce external knowledge.
 Start directly with the content.
 
-Target length: approximately 470–490 words.
-The total length must NOT exceed 500 words.
-If you are close to the limit, shorten slightly to stay under 500.
+Target length: approximately 420–450 words.
+The total length must NOT exceed 480 words.
+If you are close to the limit, shorten slightly to stay under 480.
 
 Wikipedia extracts:
 {context_text}

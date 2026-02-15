@@ -76,10 +76,11 @@ def generate_industry_report(industry, context_text, api_key, model):
     )
 
     system_msg = (
-        "You are a professional market research analyst preparing a concise industry briefing for a business audience."
-        "Use ONLY the context retrieved from Wikipedia to answer. "
-        "Maintain a professional tone, logical structure, and strong narrative flow. "
-        "Do not add external knowledge or assumptions."
+        "You are a professional market research analyst writing a concise industry briefing for a business analyst at a large corporation. "
+        "CRITICAL EVIDENCE RULE: Use ONLY the provided Wikipedia extracts. "
+        "Do not refer to the task, the prompt, or the extracts (avoid phrases like 'the extracts provided' or 'the text does not cover'). "
+        "Write in a decision-relevant, analytical tone (not an encyclopedia style). No bullet points."
+        "Synthesize information across multiple extracts and ensure every analytical claim is cited."
     )
 
     user_msg = f"""
@@ -96,7 +97,7 @@ Mandatory requirements:
    Ensure every paragraph has at least one citation to demonstrate evidence-based analysis.
 2. **Structure**: Write in structured paragraphs with smooth logical transitions.
 3. **Tone**: Analytical and professional. Avoid generic filler words.
-4.  Cross-source synthesis: At least 2 paragraphs must include evidence from 2+ different pages (i.e., 2 citations in the same paragraph).
+4. **Cross-source synthesis**: At least 2 paragraphs must include evidence from 2+ different pages (i.e., 2 citations in the same paragraph).  Avoid relying predominantly on a single source.
 5. **Integrated Geography**: Do not force a standalone "Geography" section.  Include regional examples ONLY if they are explicitly present and materially significant in the extracts.  If included, **integrate** them into the relevant analytical paragraph (e.g., regulation, competition) to support your argument.
 6. **Paragraph plan**: 
 Write 4 structured analytical paragraphs. The report must cover:
@@ -105,6 +106,7 @@ Write 4 structured analytical paragraphs. The report must cover:
 (3) Drivers and competitive dynamics,
 (4) Constraints, risks, or trade-offs.
 7. **Ending Strategy**: End Paragraph 4 with a grounded analytical implication or forward-looking dependency based on the extracts (do not use a generic summary).
+8. **No Meta-Language**: Do not refer to the extracts, the task, the data, or any limitations explicitly.
 
 Avoid bullet points. Avoid repetition.
 Do not introduce external knowledge.

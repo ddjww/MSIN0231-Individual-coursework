@@ -86,35 +86,27 @@ def generate_industry_report(industry, context_text, api_key, model):
     user_msg = f"""
 Write a concise and structured industry overview for: {industry}
 
-The report should:
-- Clearly define the industry and its scope
-- Explain its core structure or main segments where relevant
-- **Analyze** major drivers, dynamics, **and critical challenges or trade-offs** (e.g., regulation, adoption risks) reflected in the extracts.
+HARD CONSTRAINTS (must follow exactly):
+- Length: 420–450 words (MUST be < 480).
+- Structure: EXACTLY 4 paragraphs.  No headings.  No bullet points.
+- Tone: Senior Analyst level. Avoid descriptive "encyclopedia" style; use evaluative language.
+- Sources: Use ONLY the Wikipedia extracts below.  If a claim is not explicitly supported, omit it.
+- No meta-language: Do not mention the extracts, the task, or limitations (e.g., avoid “the extracts provided”).
 
-Mandatory requirements:
-1. **Citations**: You must cite the source for key facts using the format [Source: Page Title]. 
-   Example: "...market growth has accelerated [Source: Electric Vehicles]."
-   Ensure every paragraph has at least one citation to demonstrate evidence-based analysis.
-2. **Structure**: Write in structured paragraphs with smooth logical transitions.
-3. **Tone**: Analytical and professional. Avoid generic filler words.
-4. **Cross-source synthesis**: At least 2 paragraphs must include evidence from 2+ different pages (i.e., 2 citations in the same paragraph).  Avoid relying predominantly on a single source.
-5. **Integrated Geography**: Do not create a standalone geography paragraph. If regional examples (e.g., Australia) are materially relevant, integrate them into the most appropriate analytical paragraph (typically drivers or regulation) as supporting evidence.
-6. **Paragraph plan**: 
-Write 4 structured analytical paragraphs. The report must cover:
-(1) Industry definition and boundary,
-(2) Structure and key segments,
-(3) Drivers and competitive dynamics,
-(4) Constraints, risks, or trade-offs.
-7. **Ending Strategy**: End Paragraph 4 with a grounded analytical implication or forward-looking dependency based on the extracts (do not use a generic summary).
-8. **No Meta-Language**: Do not refer to the extracts, the task, the data, or any limitations explicitly.
+CITATIONS (mandatory):
+- Use [Source: Page Title] for key claims.
+- Each paragraph must include at least one citation.
+- Cross-source synthesis: Paragraph 2, Paragraphs 3 and Paragraph 4 MUST each include 2+ citations from different pages.
+- Do not invent page titles.
 
-Avoid bullet points. Avoid repetition.
-Do not introduce external knowledge.
-Start directly with the content.
+PARAGRAPH PLAN (write exactly these 4 paragraphs):
+1) Definition & boundary: define what the industry includes (and excludes) as supported by the extracts.
+2) Structure & ecosystem: explain key segments/actors AND how they interact (incumbents vs entrants, partnerships), synthesising across sources.
+3) Drivers & dynamics: analyse what is shifting demand, delivery, access, or cost structures. Integrate regional market examples (if present) to illustrate these global trends.
+4) Constraints & trade-offs: analyse the most important risks/constraints (e.g., regulation, adoption frictions, trust/security) using evidence from multiple sources, and end with a sharp analytical implication grounded in the extracts.
 
-Target length: approximately 420–450 words.
-The total length must NOT exceed 480 words.
-If you are close to the limit, shorten slightly to stay under 480.
+STYLE (secondary):
+- No generic conclusion (avoid “In conclusion/Overall…”).
 
 Wikipedia extracts:
 {context_text}

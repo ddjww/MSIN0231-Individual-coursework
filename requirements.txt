@@ -1,7 +1,0 @@
-streamlit
-langchain
-langchain-community
-langchain-openai
-openai
-wikipedia
-tiktoken
